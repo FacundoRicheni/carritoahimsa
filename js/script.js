@@ -96,9 +96,6 @@
 
 
 
-
-
-
 function myFunction() {
     document.getElementById("demo").innerHTML = "Crema de cannabis";
     alert("Agregaste una crema de Cannabis")
@@ -113,3 +110,7 @@ function myFunction3() {
     document.getElementById("demo3").innerHTML = "Jabon de cannabis";
     alert("Agregaste Jabon de Cannabis x3 unidades")
   }
+
+  let contador = 0;
+
+  const valor = document.querySelector
