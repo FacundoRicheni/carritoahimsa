@@ -111,6 +111,7 @@ function myFunction3() {
     alert("Agregaste Jabon de Cannabis x3 unidades")
   }
 
-  let contador = 0;
-
-  const valor = document.querySelector
+  const contador = document.getElementById("contar")
+  const sumarr = document.getElementById("incr")
+  const restar = document.getElementById("contar")
+  const resetar = document.getElementById("contar")
