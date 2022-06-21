@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras</title>
+    <title>Ahimsa Productos Naturales </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="icon" href="./assets/img/logo_ahimsa.png">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahimsa Productos Naturales</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="icon" href="./assets/img/logo_ahimsa.png">
 </head>
@@ -13,27 +24,35 @@
 <body>
 
 <!--  INICIO NAV -->
-    <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/img/logo_ahimsa.png" alt="" width="70" height="54" class="d-inline-block">
-            Ahimsa Productos Naturales
-          </a>
-        </div>
-        <div class="position-absolute top-1 end-0" style="margin-right:5%;">
-          
-          <input type="text" placeholder="Ingresa tu nombre">
-          <input type="email" name="" id="" placeholder="Ingresa tu E-mail">
-        </div>
-      </nav>
-      <br>
+<!--  INICIO NAV -->
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./assets/img/logo_ahimsa.png">
+      <img src="../assets/img/logo_ahimsa.png" alt="" width="70" height="54" class="d-inline-block">
+      Ahimsa Productos Naturales
+    </a>
+  </div>
+  <div class="position-absolute top-1 end-0">
+    <a href="./sections/login.html">Iniciar Sesion</a>
+    <a href="./sections/carrito.html">
+       <img src="../assets/img/pngwing.com.png" style="width: 20%;"alt="carrito de compras">
+      </a>
+  </div>
+</nav>
+<br>
 
+
+      
+      
+      
 <!-- INICIO MAIN -->
-<main>
-<!-- HEADER -->
-       <div>
+      <main>
+
+
+        <!-- HEADER -->
+        <div>
           <header>
-            <h2 style="margin: auto; padding: auto; text-align: center;" class="fs-3"> Carrito de Compras</h2>
+            <h2 style="margin: auto; padding: auto; text-align: center;" class="fs-3"> Productos 100% Naturales</h2>
             <h3 style="margin: auto; padding: auto; text-align: center;" class="fs-6"> Compra más de un producto y accede a un descuento</h3>
           </header>
         </div>
@@ -49,9 +68,10 @@
           <div class="card" style="width: 18rem; margin: auto; padding: auto;">
             <img src="./assets/img/crema_ahimsa.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Crema de CBD</h5>
-              <p class="card-text">Crema de Cannabis para los dolores.</p>
-              <a href="#" class="btn btn-success d-flex justify-content-around" onclick= "myFunction()">Comprar</a>
+              <h5 class="card-title" style="text-align: center;">Crema de CBD</h5>
+              <p class="card-text" style="text-align: center;">Crema de Cannabis para los dolores.</p>
+              <p class="card-text"style="text-align: center;" id="precioCrema">$</p>
+              <a id="boton" class="btn btn-success d-flex justify-content-around">Comprar</a>
             </div>
           </div>
         </div>
@@ -61,9 +81,10 @@
           <div class="card" style="width: 18rem; margin: auto; padding: auto;">
             <img src="./assets/img/aceite_ahimsa.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Aceite de CBD</h5>
-              <p class="card-text">Aceite de CBD para uso medicinal y terapeutico.</p>
-              <a href="#" class="btn btn-success d-flex justify-content-around" onclick= "myFunction2()">Comprar</a>
+              <h5 class="card-title" style="text-align: center;">Aceite de CBD</h5>
+              <p class="card-text" style="text-align: center;">Aceite de CBD para uso medicinal y terapeutico.</p>
+              <p class="card-text"style="text-align: center;" id="precioAceite">$</p>
+              <a id="boton2" class="btn btn-success d-flex justify-content-around">Comprar</a>
             </div>
           </div>
         </div>
@@ -74,9 +95,10 @@
           <div class="card" style="width: 18rem; margin: auto; padding: auto;">
             <img src="./assets/img/jabon_ahimsa.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Jabón de CBD</h5>
-              <p class="card-text">Jabon de coco con cannabis de uso tópico.</p>
-              <a href="#" class="btn btn-success d-flex justify-content-around" onclick= "myFunction3()">Comprar</a>
+              <h5 class="card-title" style="text-align: center;">Jabón de CBD</h5>
+              <p class="card-text" style="text-align: center;">Jabon de coco con cannabis de uso tópico.</p>
+              <p class="card-text"style="text-align: center;" id="precioJabon">$</p>
+              <a id="boton3" class="btn btn-success d-flex justify-content-around">Comprar</a>
             </div>
           </div>
         </div>
@@ -86,22 +108,6 @@
   </div>
        
 
-<!-- CARRITO DE COMPRAS -->
-
-<br><br>
-  <div class="d-flex justify-content-around">
-    <div class="card" style="width: 20rem;">
-      <div class="card-body">
-        <h5 class="card-title" style="text-align:center; ">Carrito de compras</h5>
-        <p class="card-text" id="demo"></p>
-        <p class="card-text" id="demo2"></p>
-        <p class="card-text" id="demo3"></p>
-        <a href="#" class="btn btn-danger">Eliminar Carrito</a>
-        <a href="#" class="btn btn-success">Finalizar compra</a>
-
-      </div>
-    </div>
-  </div>
 
 
 </main>

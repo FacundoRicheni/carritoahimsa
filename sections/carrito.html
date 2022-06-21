@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi Carrito </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/img/logo_ahimsa.png" type="image/x-icon">
+</head>
+
+<body>
+<!--  INICIO NAV -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/img/logo_ahimsa.png" alt="" width="70" height="54" class="d-inline-block">
+            Ahimsa Productos Naturales
+          </a>
+        </div>
+        <div class="position-absolute top-1 end-0" >
+          <a href="./login.html">Iniciar Sesion</a>
+          <a href="./carrito.html">
+             <img src="../assets/img/pngwing.com.png" style="width: 20%;"alt="carrito de compras">
+            </a>
+        </div>
+      </nav>
+      <br>
+
+    
+<!-- CARRITO DE COMPRAS -->
+
+<br><br>
+<div class="d-flex justify-content-around">
+  <div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align:center; ">Carrito de compras</h5>
+      <p class="card-text" id="productoCarrito"></p>
+      <p class="card-text" id="productoCarrito2"></p>
+      <p class="card-text" id="productoCarrito3"></p>
+      <h3>
+        <center>JavaScript Click Counter</center>
+      </h3>
+      <div>
+          <center>
+            <h3 id="counter-label">0</h3>
+          </center>
+      </div>
+      <center>
+          <div>
+              <div onclick="incrementClick()">Click Me</div>
+              <br>  
+              <button onclick="resetCounter()" class="btn btn-danger">Reset</button>
+          </div>
+      </center>
+      <br>
+      <a href="#" class="btn btn-danger">Eliminar Carrito</a>
+      <a href="#" class="btn btn-success">Finalizar compra</a>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

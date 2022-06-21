@@ -52,63 +52,74 @@
 
 // menuPrincipal();
  
-////////////////////////////////////////////////
+//////////////////////////////////////////////
 
-// let arrayCremas = [{
-//         nombre: "Crema de CBD 100 gr",
-//         precio: 900
-//     },
-//     {
-//         nombre: "Crema de CBD grande 200 gr",
-//         precio: 1500
-//     },
-// ];
-
-// let arrayAceites = [{
-//         nombre: "Aceite de CBD 20 mlts",
-//         precio: 2300
-//     },
-//     {
-//         nombre: "Aceite de CBD 100 mlts",
-//         precio: 8500
-//     },
-// ];
-
-// let arrayJabon = [{
-//     nombre: "Jabon de CBD x3 unidades",
-//     precio: 700
-// }, ];
+let arrayProductos = [
+    {
+        nombre: "Crema de CBD",
+        precio: 900
+    },
+    {
+        nombre: "Aceite de CBD",
+        precio: 2300
+    },
+    {
+        nombre: "Jabon de CBD x3 unidades",
+        precio:  700
+    },
+];
 
 
 
-// function mostrarCremas() {
-//     prompt(arrayCremas[0].nombre + " $" + arrayCremas[0].precio + "\n" + arrayCremas[1].nombre + " $" + arrayCremas[1].precio)
-// }
-
-// function mostrarJabon() {
-//     prompt(arrayJabon[0].nombre + " $" + arrayJabon[0].precio)
-// }
-
-// let mostrarAceites = prompt("Elegí un producto: \n1-" + arrayAceites[0].nombre + " $" + arrayAceites[0].precio + "\n2-" + arrayAceites[1].nombre + " $" + arrayAceites[1].precio);
-
-// mostrarJabon();
+let crema = arrayProductos[0];
+let aceite = arrayProductos[1];
+let jabon = arrayProductos[2];
 
 
+document.getElementById('boton').onclick = function(){
+    alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito");
+    }
+
+document.getElementById('boton2').onclick = function(){
+    alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
+    }
+
+document.getElementById('boton3').onclick = function(){
+    alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
+    }
+
+const precioCrema = document.getElementById("precioCrema");
+precioCrema.textContent = "$ " + arrayProductos[0].precio;
 
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Crema de cannabis";
-    alert("Agregaste una crema de Cannabis")
-  }
+const precioAceite = document.getElementById("precioAceite");
+precioAceite.textContent = "$ " + arrayProductos[1].precio;
 
-  function myFunction2() {
-  document.getElementById("demo2").innerHTML = "Aceite de cannabis";
-  alert("Agregaste un Aceite de Cannabis")
+const precioJabon = document.getElementById("precioJabon");
+precioJabon.textContent = "$ " + arrayProductos[2].precio;
+
+
+
+localStorage.setItem("nombre", "crema");
+localStorage.setItem("precio", 900);
+
+localStorage.setItem("nombre", "aceite");
+localStorage.setItem("precio", 2300);
+
+localStorage.setItem("nombre", "jabon");
+localStorage.setItem("precio", 700);
+
+
+
+function guardarDatos(storage){
+    let user = document.getElementById(emailAdress).value;
+    let password = document.getElementById(password).value;
 }
 
-function myFunction3() {
-    document.getElementById("demo3").innerHTML = "Jabon de cannabis";
-    alert("Agregaste Jabon de Cannabis x3 unidades")
-  }
+const usuario = {
+    "user": user,
+    "password": password
+}
 
-
+if (storage=== "sessionStorage")
+    sessionStorage.setItem("user",JSON.stringify(usuario))
