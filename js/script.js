@@ -69,24 +69,24 @@ let arrayProductos = [
     },
 ];
 
-
-
-let crema = arrayProductos[0];
-let aceite = arrayProductos[1];
-let jabon = arrayProductos[2];
-
-
-document.getElementById('boton').onclick = function(){
+//////////////// ALERTS DE AGREGAR PRODUCTOS ///////////////////
+const producto = document.getElementById('boton').onclick = function(){
     alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito");
-    }
+    const productojson = JSON.stringify(crema);
+    localStorage.setItem("crema", productojson);
+}
 
 document.getElementById('boton2').onclick = function(){
     alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
+    const producto2json = JSON.stringify(aceite);
+    localStorage.setItem("aceite", producto2json)
     }
 
 document.getElementById('boton3').onclick = function(){
     alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
-    }
+    const producto3json = JSON.stringify(jabon);
+    localStorage.setItem("jabon", producto3json)
+}
 
 const precioCrema = document.getElementById("precioCrema");
 precioCrema.textContent = "$ " + arrayProductos[0].precio;
@@ -100,26 +100,41 @@ precioJabon.textContent = "$ " + arrayProductos[2].precio;
 
 
 
-localStorage.setItem("nombre", "crema");
-localStorage.setItem("precio", 900);
+let crema = arrayProductos[0];
+let aceite = arrayProductos[1];
+let jabon = arrayProductos[2];
 
-localStorage.setItem("nombre", "aceite");
-localStorage.setItem("precio", 2300);
-
-localStorage.setItem("nombre", "jabon");
-localStorage.setItem("precio", 700);
-
+let arrayCarrito = [
+    {
+    }
+]
 
 
-function guardarDatos(storage){
-    let user = document.getElementById(emailAdress).value;
-    let password = document.getElementById(password).value;
-}
 
-const usuario = {
-    "user": user,
-    "password": password
-}
 
-if (storage=== "sessionStorage")
-    sessionStorage.setItem("user",JSON.stringify(usuario))
+
+
+
+// localStorage.setItem("nombre", "crema");
+// localStorage.setItem("precio", 900);
+
+// localStorage.setItem("nombre", "aceite");
+// localStorage.setItem("precio", 2300);
+
+// localStorage.setItem("nombre", "jabon");
+// localStorage.setItem("precio", 700);
+
+
+
+// function guardarDatos(storage){
+//     let user = document.getElementById(emailAdress).value;
+//     let password = document.getElementById(password).value;
+// }
+
+// const usuario = {
+//     "user": user,
+//     "password": password
+// }
+
+// if (storage=== "sessionStorage")
+//     sessionStorage.setItem("user",JSON.stringify(usuario))
