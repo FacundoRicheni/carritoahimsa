@@ -52,7 +52,7 @@
 
 // menuPrincipal();
  
-//////////////////////////////////////////////
+/////////////////////ARRAY DE PRODUCTOS/////////////////////////
 
 let arrayProductos = [
     {
@@ -69,24 +69,13 @@ let arrayProductos = [
     },
 ];
 
-//////////////// ALERTS DE AGREGAR PRODUCTOS ///////////////////
-const producto = document.getElementById('boton').onclick = function(){
-    alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito");
-    const productojson = JSON.stringify(crema);
-    localStorage.setItem("crema", productojson);
-}
+///////////////// PRODUCTOS DEL ARRAY /////////////////
 
-document.getElementById('boton2').onclick = function(){
-    alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
-    const producto2json = JSON.stringify(aceite);
-    localStorage.setItem("aceite", producto2json)
-    }
+let crema = arrayProductos[0];
+let aceite = arrayProductos[1];
+let jabon = arrayProductos[2];
 
-document.getElementById('boton3').onclick = function(){
-    alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
-    const producto3json = JSON.stringify(jabon);
-    localStorage.setItem("jabon", producto3json)
-}
+////////////////PRECIOS DEL ARRAY/////////////////////
 
 const precioCrema = document.getElementById("precioCrema");
 precioCrema.textContent = "$ " + arrayProductos[0].precio;
@@ -99,15 +88,28 @@ const precioJabon = document.getElementById("precioJabon");
 precioJabon.textContent = "$ " + arrayProductos[2].precio;
 
 
+//////////////// ALERTS DE AGREGAR PRODUCTOS ///////////////////
 
-let crema = arrayProductos[0];
-let aceite = arrayProductos[1];
-let jabon = arrayProductos[2];
+const producto = document.getElementById('boton').onclick = function(){
+    alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito");
+    JSON.stringify(crema);
+    arrayCarrito.push(crema);
+}    
 
-let arrayCarrito = [
-    {
+document.getElementById('boton2').onclick = function(){
+    alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
+    JSON.stringify(aceite);
+    arrayCarrito.push(aceite);
     }
-]
+
+document.getElementById('boton3').onclick = function(){
+    alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
+    JSON.stringify(jabon);
+    arrayCarrito.push(jabon);
+}    
+
+
+let arrayCarrito = [];
 
 
 
