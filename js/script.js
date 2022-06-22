@@ -90,32 +90,28 @@ precioJabon.textContent = "$ " + arrayProductos[2].precio;
 
 //////////////// ALERTS DE AGREGAR PRODUCTOS ///////////////////
 
-const producto = document.getElementById('boton').onclick = function(){
-    alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito");
-    JSON.stringify(crema);
+document.getElementById('boton').onclick = function(){
+    alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito")
+    const productojson = JSON.stringify(crema);
+    localStorage.setItem("crema", productojson);
     arrayCarrito.push(crema);
 }    
 
 document.getElementById('boton2').onclick = function(){
     alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
-    JSON.stringify(aceite);
+    const productojson2 = JSON.stringify(aceite);
+    localStorage.setItem("aceite", productojson2);
     arrayCarrito.push(aceite);
     }
 
 document.getElementById('boton3').onclick = function(){
     alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
-    JSON.stringify(jabon);
+    const productojson3 = JSON.stringify(jabon);
+    localStorage.setItem("jabon", productojson3);
     arrayCarrito.push(jabon);
-}    
+}
 
-
-let arrayCarrito = [];
-
-
-
-
-
-
+const arrayCarrito = [];
 
 // localStorage.setItem("nombre", "crema");
 // localStorage.setItem("precio", 900);
