@@ -18,12 +18,6 @@
             Ahimsa Productos Naturales
           </a>
         </div>
-        <div class="position-absolute top-1 end-0" >
-          <a href="./login.html">Iniciar Sesion</a>
-          <a href="./carrito.html">
-             <img src="../assets/img/pngwing.com.png" style="width: 20%;"alt="carrito de compras">
-            </a>
-        </div>
       </nav>
       <br>
 
@@ -35,21 +29,20 @@
   <div class="card" style="width: 70%">
     <div class="card-body">
       <h5 class="card-title" style="text-align:center;">Carrito de compras</h5>
-      <div>
+      <div style="text-align:center;">
         <br>
-        <p id="miCarrito"></p>
+        <ul id="miCarrito"></ul>
         <br>
       </div>
       <div class="position-relative position-absolute top-100 start-50 translate-middle">
-        <a href="#" class="btn btn-danger">Eliminar Carrito</a>
-        <a href="#" class="btn btn-success">Finalizar compra</a>
+        <a id="vaciarCarrito" class="btn btn-danger">Eliminar Carrito</a>
+        <a  id="guardarCarrito" class="btn btn-success">Finalizar compra</a>
       </div>
     </div>
   </div>
 </div>
 
-
-<script src="../js/script.js"></script>
+<script src="../js/carrito.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

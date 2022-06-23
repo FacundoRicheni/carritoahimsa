@@ -1,59 +1,3 @@
-//  let total = 0;
-// let opcionMenu = prompt("Elegí un producto: \n1- Aceite. \n2- Crema. \n3- Jabon. \n4- Carrito de compras. \n Escriba x para finalizar.");
-
-
-// function menuPrincipal(){
-//     while (opcionMenu != "x") {
-//         switch (opcionMenu) {
-//             case "1":
-//                 aceite();
-//                 break;
-//             case "2":
-//                 crema();
-//                 break;
-//             case "3":
-//                 jabon();
-//                 break;
-//             case "4":
-//                 mostrarTotal();
-//                 break;
-//             default:
-//                 alert("Elegiste una opcion invalida");
-//                 break;
-//         }
-//         opcionMenu =  prompt("Elegí un producto: \n1- Aceite. \n2- Crema. \n3- Jabon. \n4- Carrito de compras. \n Escriba x para finalizar.");
-//     }
-// }
-
-// function mostrarTotal (){
-//     alert("Tienes  " + total + " productos en tu carrito de compras");
-// }
-
-// function crema(){
-//     let crema = parseFloat(prompt("Ingresa la cantidad de cremas a comprar"));
-//             total = total + crema;
-//     alert("se agregó " + crema + " crema/s al carrito de compra");
-//     }
-
-// function aceite(){
-//     let aceite = parseFloat(prompt("Ingresa la cantidad de aceite de CBD que desea comprar"));
-//             total = total + aceite;
-//     alert("se agregó " + aceite + " aceite/s de cbd al carrito de compra");
-//     }
-
-
-// function jabon(){
-//     let jabon = parseFloat(prompt("Ingresa la cantidad de jabón de CBD a comprar"));
-//             total = total + jabon;
-//     alert("se agregó " + jabon + " jabón/es al carrito de compra");
-//     }
-
-
-
-// menuPrincipal();
- 
-/////////////////////ARRAY DE PRODUCTOS/////////////////////////
-
 let arrayProductos = [
     {
         nombre: "Crema de CBD",
@@ -75,43 +19,61 @@ let crema = arrayProductos[0];
 let aceite = arrayProductos[1];
 let jabon = arrayProductos[2];
 
+const arrayCarrito = [];
+
 ////////////////PRECIOS DEL ARRAY/////////////////////
 
 const precioCrema = document.getElementById("precioCrema");
-precioCrema.textContent = "$ " + arrayProductos[0].precio;
-
+precioCrema.textContent = "$" + arrayProductos[0].precio;
 
 const precioAceite = document.getElementById("precioAceite");
-precioAceite.textContent = "$ " + arrayProductos[1].precio;
+precioAceite.textContent = "$" + arrayProductos[1].precio;
 
 const precioJabon = document.getElementById("precioJabon");
-precioJabon.textContent = "$ " + arrayProductos[2].precio;
+precioJabon.textContent = "$" + arrayProductos[2].precio;
 
 
-//////////////// ALERTS DE AGREGAR PRODUCTOS ///////////////////
+//////////////// ALERTS y AGREGAR PRODUCTOS AL ARRAY CARRITO ///////////////////
 
 document.getElementById('boton').onclick = function(){
     alert("Agregaste " + arrayProductos[0].nombre + " a tu carrito")
-    const productojson = JSON.stringify(crema);
-    localStorage.setItem("crema", productojson);
-    arrayCarrito.push(crema);
-}    
+    arrayCarrito.push(arrayProductos[0]);
+    // const productojson = JSON.stringify(crema);
+    // localStorage.setItem("crema", productojson);
+};   
 
 document.getElementById('boton2').onclick = function(){
     alert("Agregaste " + arrayProductos[1].nombre + " a tu carrito");
-    const productojson2 = JSON.stringify(aceite);
-    localStorage.setItem("aceite", productojson2);
-    arrayCarrito.push(aceite);
-    }
+    arrayCarrito.push(arrayProductos[1]);
+    // const productojson2 = JSON.stringify(aceite);
+    // localStorage.setItem("aceite", productojson2);
+};
 
 document.getElementById('boton3').onclick = function(){
     alert("Agregaste: " + arrayProductos[2].nombre + " a tu carrito");
-    const productojson3 = JSON.stringify(jabon);
-    localStorage.setItem("jabon", productojson3);
-    arrayCarrito.push(jabon);
-}
+    arrayCarrito.push(arrayProductos[2]);    
+    // const productojson3 = JSON.stringify(jabon);
+    // localStorage.setItem("jabon", productojson3);
+};
 
-const arrayCarrito = [];
+
+
+///////////////////////////////////////////////////////////////
+const guardar = document.getElementById('guardarCarrito');
+
+guardar.onclick = function guardarCarrito(){
+    localStorage.setItem("Carrito", JSON.stringify(arrayCarrito));
+};
+
+
+
+// function vaciarCarrito (){
+//     localStorage.clear();
+// }
+
+// const vaciarCarrito = document.getElementById("vaciarCarrito");
+// vaciarCarrito.onclick = vaciarCarrito();
+
 
 // localStorage.setItem("nombre", "crema");
 // localStorage.setItem("precio", 900);
