@@ -34,3 +34,28 @@ function addLi() {
 console.log(elementosCarrito);
 
 console.log(productos)
+
+let btnFinalizar = document.getElementById("guardarCarrito");
+btnFinalizar.addEventListener("click",()=>{
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Su pedido se realizó con éxito',
+    showConfirmButton: false,
+    timer: 1500
+  })
+})
+
+let btnVaciarCarrito = document.getElementById("vaciarCarrito");
+btnVaciarCarrito.addEventListener("click",()=>{
+  Swal.fire({
+    position: 'top-end',
+    icon: 'error',
+    title: 'Su carrito ha sido eliminado',
+    showConfirmButton: false,
+    timer: 1500
+  }
+  )
+})
+
+
