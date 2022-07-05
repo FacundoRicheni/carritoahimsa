@@ -4,20 +4,6 @@ let miCarrito = document.getElementById("miCarrito");
 let productos = [];
 productos.push(elementosCarrito);
 
-// let carritodeCompras = elementosCarrito.map(function(x){
-//     miCarrito.innerHTML = (x.nombre + "   $" + x.precio) + (x.nombre + "   $" + x.precio)
-// });
-
-
-// let misProductos = productos.map(function(x){
-//     miCarrito.innerHTML = (x[0].nombre + x[0].precio + x[1].nombre + x[1].precio)
-// });
-
-// elementosCarrito.forEach(Object =>{
-//     document.write(Object.nombre + Object.precio)
-// })
-
-
 addLi();
 
 function addLi() {
@@ -38,7 +24,6 @@ console.log(productos)
 let btnFinalizar = document.getElementById("guardarCarrito");
 btnFinalizar.addEventListener("click",()=>{
   Swal.fire({
-    position: 'top-end',
     icon: 'success',
     title: 'Su pedido se realizó con éxito',
     showConfirmButton: false,
@@ -49,7 +34,6 @@ btnFinalizar.addEventListener("click",()=>{
 let btnVaciarCarrito = document.getElementById("vaciarCarrito");
 btnVaciarCarrito.addEventListener("click",()=>{
   Swal.fire({
-    position: 'top-end',
     icon: 'error',
     title: 'Su carrito ha sido eliminado',
     showConfirmButton: false,
