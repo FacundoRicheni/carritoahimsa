@@ -11,7 +11,7 @@ function retrieve(e){
               icon: 'info',
               title: 'El campo de busqueda está vacio',
               showConfirmButton: false,
-              timer: 1500
+              timer: 1000
             })
     };
     
