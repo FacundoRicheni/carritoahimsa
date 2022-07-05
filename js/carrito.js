@@ -17,7 +17,6 @@ function addLi() {
     }
 }
 
-console.log(elementosCarrito);
 
 console.log(productos)
 
@@ -38,8 +37,14 @@ btnVaciarCarrito.addEventListener("click",()=>{
     title: 'Su carrito ha sido eliminado',
     showConfirmButton: false,
     timer: 1500
-  }
+  },
   )
+  console.log("SE vacia carrito")
+  productos.splice(0,productos.length),
+  elementosCarrito.splice(0, elementosCarrito.length)
+  console.log("PRODUCTOS : " , productos ,"elementos " , elementosCarrito)
+  localStorage.clear();
+  location.reload()
 })
 
 
